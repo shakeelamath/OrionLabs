@@ -15,12 +15,14 @@
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <div id="loader"></div>
+
 
     <!-- page Navigation -->
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/imgs/pixelatelogo.png" alt="" style="width: 200px; height: 50px;">
+                <img src="assets/imgs/pixelatelogo.png" alt="" style="width: 200px; height: 40px;">
             </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,7 +80,7 @@
                     <div class="card mb-4 mb-md-0" >
                         <img src="assets\imgs\cards.jpg" alt="Background Image">
                         <div class="card-body">
-                            <small class="text-primary font-weight-bold">01</small>
+                            <small class="text-white font-weight-bold">01</small>
                             <h5 class="card-title mt-3"> Web Developement <h5>
                             <p class="mb-0">Our web development service creates impactful online experiences, combining technical prowess with creative design. We build user-friendly websites that captivate audiences and drive business growth.</p>
                         </div>
@@ -88,7 +90,7 @@
                     <div class="card mb-4 mb-md-0">
                         <img src="assets\imgs\seo.jpeg" alt="Background Image">
                         <div class="card-body">
-                            <small class="text-primary font-weight-bold">02</small>
+                            <small class="text-white font-weight-bold">02</small>
                             <h5 class="card-title mt-3">SEO Optimization<h5>
                             <p class="mb-0">Our company specializes in providing exceptional SEO optimization services to enhance your website's visibility and drive organic traffic, ultimately helping your business succeed in the digital realm. With our strategic approach and expert team, we'll optimize your online presence and improve search engine rankings for maximum impact.</p>
                         </div>
@@ -99,7 +101,7 @@
                     <div class="card mb-4 mb-md-0">
                         <img src="assets\imgs\social.jpeg" alt="Background Image">
                         <div class="card-body">
-                            <small class="text-primary font-weight-bold">03</small>
+                            <small class="text-white font-weight-bold">03</small>
                             <h5 class="card-title mt-3">Social Media Management</h5>
                             <p class="mb-0">Our skilled team handles every aspect of your social media presence. From content creation to engagement and analytics, we ensure that your brand's voice resonates across platforms. With our strategic approach, you'll build a vibrant community and see your social media efforts convert into tangible results.</p>
                         </div>
@@ -109,7 +111,7 @@
                     <div class="card mb-4 mb-md-0">
                         <img src="assets\imgs\mobile.jpeg" alt="Background Image">
                         <div class="card-body">
-                            <small class="text-primary font-weight-bold">04</small>
+                            <small class="text-white font-weight-bold">04</small>
                             <h5 class="card-title mt-3">Mobile App Development</h5>
                             <p class="mb-0">Our team specializes in crafting high-quality, user-friendly mobile applications tailored to meet your specific needs. Whether it's iOS, Android, or cross-platform development, we leverage the latest technologies to deliver seamless and engaging experiences for your users.</p>
                         </div>
@@ -215,7 +217,8 @@
                       <textarea name="message" id="" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Message"></textarea>
                     </div>
                     <div class="form-group col-12 mb-0">
-                        <button type="submit" class="btn btn-primary rounded w-md mt-3" onclick="submitForm(event)">Send</button>
+                        <button type="submit" class="btn btn-primary rounded w-md mt-3" onclick="submitForm(event)" style="background-color: white; color: black;">Send</button>
+
                       </div>
                     </div>
                   </form>
@@ -252,7 +255,7 @@
               
             <!-- Page Footer -->
             <footer class="mt-5 py-4 border-top border-secondary">
-                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, LeadMark Created By <a href=# target="_blank" style="color: white;">Pixelate.</a>  All rights reserved </p>     
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>,Created By <a href=# target="_blank" style="color: white;">Pixelate.</a>  All rights reserved </p>     
             </footer>
             <!-- End of Page Footer -->  
         </div>
@@ -270,6 +273,11 @@
 
     <!-- LeadMark js -->
     <script src="assets/js/leadmark.js"></script>
-
+    <script>
+        window.onload = function() {
+    var loader = document.getElementById("loader");
+    loader.classList.add("loaded");
+}
+    </script>
 </body>
 </html>

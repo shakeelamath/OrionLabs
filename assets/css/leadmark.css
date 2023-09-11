@@ -2316,6 +2316,22 @@ textarea.form-control {
   display: block;
   margin-top: 0.25rem;
 }
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0E1525; /* Background color of the loader */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+#loader.loaded {
+  opacity: 0;
+}
+
 
 .form-row {
   display: -webkit-box;

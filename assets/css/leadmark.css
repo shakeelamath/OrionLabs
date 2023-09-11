@@ -2334,7 +2334,7 @@ textarea.form-control {
 }
 
 .custom-div {
-  margin-left: -40px;
+  margin-left: -20px;
   max-width: 100%;
   max-height: 100%; /* Adjust the value as needed to move it to the left */
 }

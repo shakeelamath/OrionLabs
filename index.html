@@ -12,10 +12,21 @@
     <!-- Bootstrap + LeadMark main styles -->
 	<link rel="stylesheet" href="assets/css/leadmark.css">
     <link rel="icon" href="assets/imgs/pixelateicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.3/css/all.min.css">
+
+
+
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <div id="loader"></div>
+    <div class="preloader">
+        <div class="spinner">
+             <span class="spinner-rotate"></span>
+        </div>
+   </div>
 
 
     <!-- page Navigation -->
@@ -34,9 +45,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Process</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -76,7 +84,7 @@
             <h6 class="section-subtitle text-center mb-5 pb-3">Crafting Digital Brilliance, One Pixel at a Time.</h6>
 
             <div class="row">
-                <div class="col-md-3" style="padding-top: 20px; padding-bottom: 20px;">
+                <div class="col-md-3 fade-in-right" style="padding-top: 20px; padding-bottom: 20px;">
                     <div class="card mb-4 mb-md-0" >
                         <img src="assets\imgs\cards.jpg" alt="Background Image">
                         <div class="card-body">
@@ -86,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" style="padding-top: 20px; padding-bottom: 20px;">
+                <div class="col-md-3 fade-in-left" style="padding-top: 20px; padding-bottom: 20px;">
                     <div class="card mb-4 mb-md-0">
                         <img src="assets\imgs\seo.jpeg" alt="Background Image">
                         <div class="card-body">
@@ -97,7 +105,7 @@
                     </div>
                 </div>
                
-                <div class="col-md-3" style="padding-top: 20px; padding-bottom: 20px;">
+                <div class="col-md-3 fade-in-right" style="padding-top: 20px; padding-bottom: 20px;">
                     <div class="card mb-4 mb-md-0">
                         <img src="assets\imgs\social.jpeg" alt="Background Image">
                         <div class="card-body">
@@ -108,7 +116,7 @@
                     </div>
                 </div>
                 <div class="col-md-3" style="padding-top: 20px; padding-bottom: 20px;">
-                    <div class="card mb-4 mb-md-0">
+                    <div class="card mb-4 mb-md-0 fade-in-left">
                         <img src="assets\imgs\mobile.jpeg" alt="Background Image">
                         <div class="card-body">
                             <small class="text-white font-weight-bold">04</small>
@@ -144,7 +152,6 @@
                         </div>
                         <div class="col-12 mt-4" style="color: white;">
                             <p> We bring the perfect blend of technical proficiency and creative flair to every project we undertake. As a newly established web solutions company, we are driven by our passion for leveraging cutting-edge technologies to build visually stunning and highly functional websites.</p>
-                            <p><b>. Trust Pixelate to be your trusted partner in harnessing the power of the web and achieving remarkable results in today's competitive landscape.</b><br>
                             </p>
                             <p>Our expertise in SEO optimization ensures that our clients' websites not only look impressive but also rank high in search engine results, attracting targeted organic traffic. With a strong emphasis on data analytics, we provide our clients with valuable insights and actionable recommendations to optimize their online presence and drive measurable results.</p>
                         </div>
@@ -160,18 +167,29 @@
     <!-- Blog Section -->
     <section class="section" id="blog" style="background-image: url('assets/imgs/aboutbg2.jpg'); ">
         <div class="container">
-            <h6 class="section-title mb-3 text-center" style="margin-bottom: 20px; color: white;">How We Do Things Around Here</h6>
-
             
     
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center custom-div">
-                    <img src="assets/imgs/chart3.png" alt="Chart Image" style="max-width: 100%; max-height: 100%;" class="custom-image">
+            <div class="row">
+                <div class="col-md-5 text-left">
+                    <i class="fab fa-html5 fa-6x" style="color: white; padding: 20px;"></i> <!-- HTML5 Icon -->
+                    <i class="fab fa-css3 fa-6x" style="color: white; padding: 20px;"></i> <!-- CSS3 Icon -->
+                    <i class="fab fa-java fa-6x" style="color: white; padding: 20px;"></i><br> <!-- Java Icon -->
+                    <i class="fab fa-python fa-6x" style="color: white; padding: 20px;"></i><!-- Python Icon -->
+                    <i class="fab fa-android fa-6x" style="color: white; padding: 20px;"></i>
+                    <i class="fab fa-apple fa-6x" style="color: white; padding: 20px; position: relative; top: -17px;"></i>
+                    <i class="fab fa-github fa-6x" style="color: white; padding: 20px;"></i>
+                    <i class="fab fa-js fa-6x" style="color: white; padding: 20px;"></i>
+                    <i class="fab fa-react fa-6x" style="color: white; padding: 20px;"></i>
+                </div>
+                <div class="col-md-6 text-left ml-auto mt-auto mb-auto">
+                    <p style="color: white; font-size: x-large;" ><b>Trust Pixelate to be your trusted partner in harnessing the power of the web and achieving remarkable results in today's competitive landscape.</b><br>
+
                 </div>
             </div>
-    
         </div>
     </section>
+    
+    
     
     
     
@@ -274,10 +292,15 @@
     <!-- LeadMark js -->
     <script src="assets/js/leadmark.js"></script>
     <script>
-        window.onload = function() {
-    var loader = document.getElementById("loader");
-    loader.classList.add("loaded");
-}
-    </script>
+        $(document).ready(function() { // Changed from $(window).load
+        
+            // Simulate a delay to show the loader. You can remove this setTimeout in your actual code.
+            setTimeout(function() {
+                $('.preloader').fadeOut(500); // Set duration in milliseconds
+                $('body').fadeIn(500);
+            }, 3000); // This waits for 3 seconds (adjust as needed)
+        
+        });
+        </script>
 </body>
 </html>

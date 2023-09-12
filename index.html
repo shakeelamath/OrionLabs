@@ -325,9 +325,10 @@
             </div>
             <div class="col-md-7">
                 <form id="contact-form" 
-                    method="POST" 
-                    action="https://script.google.com/macros/s/AKfycbxqCwkW_D0LzurTjDzISbDsNlscSurs8dMs77A_ORJjq1moclw_dL-QyJRtXi0HJhqiLg/exec">
-                    <h4 class="mb-4" style="color: white;">Drop Us A Line</h4>
+                      method="POST" 
+                      action="https://script.google.com/macros/s/AKfycbyS0wW-OlP-r2a1G6YFuJmmKO6E1V1mVuQhRNjJexWn5CzpZCnqQLtKvCcy-25bxiRv/exec">
+                                 
+                 <h4 class="mb-4" style="color: white;">Drop Us A Line</h4>
                     <div class="form-row">
                         <div class="form-group col-sm-4" style="color: white;">
                             <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Name">
@@ -336,37 +337,37 @@
                             <input type="email" class="form-control text-white rounded-0 bg-transparent" name="email" placeholder="Email">
                         </div>
                         <div class="form-group col-sm-4" style="color: white;">
-                            <input type="tel" class="form-control text-white rounded-0 bg-transparent" name="phone" placeholder="Phone" maxlength="10">
-                        </div>
-                        <div class="form-group col-sm-12" style="color: white;">
-                            <input type="text" class="form-control text-white rounded-0 bg-transparent" name="subject" placeholder="Subject">
+                            <input type="tel" class="form-control text-white rounded-0 bg-transparent" name="phone" placeholder="Phone Number">
                         </div>
                         <div class="form-group col-12" style="color: white;">
-                            <textarea name="message" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-group col-12" style="color: white;">
-                            <label>
-                                <input type="radio" name="contactPreference" value="email"> Contact me via Email
-                            </label>
-                            <label>
-                                <input type="radio" name="contactPreference" value="call"> Contact me via Call
-                            </label>
+                            <textarea name="message" id="" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group col-12 mb-0">
-                            <button type="submit" class="btn btn-primary rounded w-md mt-3" onclick="submitForm(event)" style="background-color: white; color: black;">Send</button>
+                            <div class="form-check form-check-inline" style="color: white;">
+                                <input class="form-check-input" type="radio" name="contactPreference" id="emailPreference" value="email">
+                                <label class="form-check-label" for="emailPreference">Email</label>
+                            </div>
+                            <div class="form-check form-check-inline" style="color: white;">
+                                <input class="form-check-input" type="radio" name="contactPreference" id="callPreference" value="call">
+                                <label class="form-check-label" for="callPreference">Call</label>
+                            </div>
+                            
                         </div>
+                        <button type="submit" class="btn btn-primary rounded w-md mt-3" onclick="submitForm(event)" style="background-color: white; color: black;">Send</button>
                     </div>
                 </form>
             </div>
             
-            
-                
                 <script>
                     function submitForm(event) {
                       event.preventDefault(); // Prevent the form from submitting immediately
                   
                       // Perform any necessary form validation here before submitting
-                  
+                        // Display a success message
+                        alert("Form submitted successfully.");
+                          // Reset the form
+                          
+                      
                       // Submit the form asynchronously
                       var form = document.getElementById("contact-form");
                       var formData = new FormData(form);
@@ -375,18 +376,14 @@
                         method: form.method,
                         body: formData
                       })
-                      .then(function (response) {
+                      
                         // Handle the response here if needed
                   
-                        // Display a success message
-                        alert("Form submitted successfully.");
                   
                         // Reset the form
                         form.reset();
-                      })
-                      .catch(function (error) {
-                        console.error(error);
-                      });
+                     
+                      
                     }
                   </script>
               

@@ -172,7 +172,7 @@
   border-radius: 50%;
   border: 2px solid #E3AE57;
   border-top-color: #f9f9f9;
-  animation: spinner .6s linear infinite;
+  animation: spinner 0.6s linear infinite;
 }
 
 @-webkit-keyframes spinner {
@@ -238,6 +238,7 @@ body {
   color: #444;
   text-align: left;
   background-color: #fff;
+  display: none;
 }
 
 [tabindex="-1"]:focus {

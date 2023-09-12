@@ -43,14 +43,36 @@
   --font-family-sans-serif: "Poppins", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+@-webkit-keyframes scroll-reverse {
+  0% {
+    -webkit-transform: translateX(calc(-250px * 11));
+    transform: translateX(calc(-250px * 11));
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    -webkit-transform: translateX(calc(-250px * 11));
+    transform: translateX(calc(-250px * 11));
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 @-webkit-keyframes scroll {
   0% {
   -webkit-transform: translateX(0);
   transform: translateX(0);
   }
   100% {
-  -webkit-transform: translateX(calc(-250px * 7));
-  transform: translateX(calc(-250px * 7));
+  -webkit-transform: translateX(calc(-250px * 11));
+  transform: translateX(calc-(250px * 11));
   }
   }
   @keyframes scroll {
@@ -59,8 +81,8 @@
   transform: translateX(0);
   }
   100% {
-  -webkit-transform: translateX(calc(-250px * 7));
-  transform: translateX(calc(-250px * 7));
+  -webkit-transform: translateX(calc(-250px * 11));
+  transform: translateX(calc(-250px * 11));
   }
   }
   .slider {
@@ -95,6 +117,9 @@
   animation: scroll 40s linear infinite;
   display: flex;
   width: calc(250px * 14);
+  }
+  .slider-reverse .slide-track {
+    animation: scroll-reverse 40s linear infinite;
   }
   .slider .slide {
   height: 100px;

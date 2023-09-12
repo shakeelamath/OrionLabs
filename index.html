@@ -18,12 +18,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.3/css/all.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Wait for the DOM content to load
+      window.onload = function() {
+        // Once everything (including images) is loaded
+        var preloader = document.querySelector('.preloader');
+        var body = document.querySelector('body');
+        
+        preloader.classList.add('fade-in-left'); // Optional animation to fade out the preloader
+  
+        setTimeout(function() {
+          preloader.style.display = 'none'; // Hide the preloader
+          body.style.display = 'block'; // Show the body content
+          body.classList.add('fade-in-right'); // Optional animation to fade in the body content
+        }, 1000); // Adjust the delay as needed
+      }
+    });
+  </script>
 
 
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" style="display: none;">
+    
     <div class="preloader">
         <div class="spinner">
              <span class="spinner-rotate"></span>

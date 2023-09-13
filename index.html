@@ -417,6 +417,21 @@
             }, 3000); // This waits for 3 seconds (adjust as needed)
         
         });
-        </script>
+</script>
+        
+<script>
+    $(document).ready(function(){
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 50) {
+      $('.navbar').addClass('navbar-scrolled');
+      
+    } else {
+      $('.navbar').removeClass('navbar-scrolled');
+    }
+  });
+});
+
+
+</script>
 </body>
 </html>

@@ -4774,10 +4774,8 @@ input[type="button"].btn-block {
   padding: 1.5rem 1rem;
 }
 .navbar-scrolled {
-  background-color: #0E1525!important;
-  border-color: 1px solid  #0E1525!important ;
-  
-   /* Change to your desired background color */
+  background-color: rgba(14, 21, 37, 0.7) !important;
+  border-color: rgba(14, 21, 37, 0.7) !important;
 }
 .navbar-scrolled.navbar-light .navbar-nav .nav-link {
   color: white !important;
@@ -5270,7 +5268,7 @@ input[type="button"].btn-block {
   word-wrap: break-word;
   border: 1px solid #fff; /* White border */
   border-radius: 20px;
-  height: 100%;
+  height: 300px;
   color: #fff;
   overflow: hidden;
   background-color: none; /* Ensure the image doesn't overflow the card */
@@ -11226,7 +11224,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 p {
-  font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(16px + (14 - 13) * ((100vw - 320px) / (1200 - 320)));
   font-weight: 400;
   opacity: .8;
   line-height: 1.5;
@@ -11246,7 +11244,7 @@ pre .code {
 
 @media (min-width: 992px) {
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -11424,6 +11422,7 @@ textarea.form-control {
 .navbar {
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
+  
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -11468,7 +11467,7 @@ textarea.form-control {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   background: #fff;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: none !important;
 }
 
 .navbar.custom-navbar.affix .nav-link {
@@ -11830,7 +11829,7 @@ textarea.form-control {
 }
 
 .section .section-subtitle {
-  font-size: calc(13px + (13 - 13) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(18px + (13 - 13) * ((100vw - 320px) / (1200 - 320)));
   font-weight: 500;
   margin-bottom: 0px;
   opacity: .9;
